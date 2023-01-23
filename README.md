@@ -16,12 +16,10 @@ Creates a randomly named global TCP healthcheck on port 80
 ### Global TCP Healthcheck on port 25
 
 ```
-project_id = "project-123456"
+project_id  = "project-123456"
 name        = "smtp"
 description = "A basic healthcheck for the mail relays"
-params = {
-  port = 25
-}
+port        = 25
 ```
 
 ### Global HTTP Healthcheck on nonstandard port at nonstandard interval
@@ -29,37 +27,29 @@ params = {
 ```
 project_id = "myproject-123456"
 name       = "gunicorn"
-params = {
-  protocol = "http"
-  port     = 8081
-  interval = 20
-}
+protocol   = "http"
+port       = 8081
+interval   = 20
 ```
 
 ### Global HTTP Healthcheck with custom request / response
 
 ```
-project_id = "myproject-123456"
-name       = "apache"
-params = {
-  protocol     = "http"
-  type         = "http"
-  request_path = "/manual/en/index.html"
-  response     = "Apache2"
-}
+project_id   = "myproject-123456"
+name         = "apache"
+protocol     = "http"
+request_path = "/manual/en/index.html"
+response     = "Apache2"
 ```
 
 ### Regional TCP Healthcheck
 
 ```
-project_id = "myproject-123456"
-name       = "werkzeug"
-params = {
-  protocol  = "tcp"
-  port      = 5000
-  regional  = true
-  region    = "europe-west3"
-}
+project_id  = "myproject-123456"
+name        = "werkzeug"
+protocol    = "tcp"
+port        = 5000
+region      = "europe-west3"
 ```
 
 ## Outputs
